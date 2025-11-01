@@ -1,0 +1,42 @@
+{
+  "name": "JavaScript",
+  "extensions": [".js", ".jsx", ".mjs"],
+  "patterns": {
+    "keyword": {
+      "pattern": "\\b(async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|export|extends|finally|for|function|if|import|in|instanceof|let|new|of|return|super|switch|this|throw|try|typeof|var|void|while|with|yield)\\b",
+      "flags": ""
+    },
+    "builtin": {
+      "pattern": "\\b(Array|Boolean|Date|Error|Function|JSON|Math|Number|Object|Promise|Proxy|Reflect|RegExp|String|Symbol|console|document|window|process|global|module|exports|require)\\b",
+      "flags": ""
+    },
+    "string": {
+      "pattern": "(\"[^\"\\n]*?\"|'[^'\\n]*?'|`[^`]*?`)",
+      "flags": ""
+    },
+    "comment": {
+      "pattern": "(\\/\\/.*?$|\\/\\*[\\s\\S]*?\\*\\/)",
+      "flags": "m"
+    },
+    "number": {
+      "pattern": "\\b(?:0[xX][0-9a-fA-F]+|0[bB][01]+|0[oO][0-7]+|\\d+\\.?\\d*(?:[eE][+-]?\\d+)?)\\b",
+      "flags": ""
+    },
+    "function": {
+      "pattern": "\\b(?:function|const|let|var)\\s+(\\w+)\\s*(?:=\\s*(?:async\\s*)?(?:\\([^)]*\\)|\\w+)\\s*=>|\\([^)]*\\))",
+      "group": 1
+    },
+    "class": {
+      "pattern": "\\bclass\\s+(\\w+)",
+      "group": 1
+    },
+    "regex": {
+      "pattern": "\\/(?:[^\\/\\n\\\\]|\\\\.)+\\/[gimuy]*",
+      "flags": ""
+    },
+    "operator": {
+      "pattern": "[+\\-*/%=<>!&|^~?:]+",
+      "flags": ""
+    }
+  }
+}

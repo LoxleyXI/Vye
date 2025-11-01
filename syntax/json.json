@@ -1,0 +1,30 @@
+{
+  "name": "JSON",
+  "extensions": [".json", ".jsonc"],
+  "patterns": {
+    "property": {
+      "pattern": "\"[^\"]+\"(?=\\s*:)",
+      "flags": ""
+    },
+    "string": {
+      "pattern": "\"[^\"]*?\"",
+      "flags": ""
+    },
+    "number": {
+      "pattern": "\\b-?\\d+\\.?\\d*(?:[eE][+-]?\\d+)?\\b",
+      "flags": ""
+    },
+    "boolean": {
+      "pattern": "\\b(?:true|false)\\b",
+      "flags": ""
+    },
+    "null": {
+      "pattern": "\\bnull\\b",
+      "flags": ""
+    },
+    "comment": {
+      "pattern": "\\/\\/.*?$|\\/\\*[\\s\\S]*?\\*\\/",
+      "flags": "m"
+    }
+  }
+}

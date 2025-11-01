@@ -1,0 +1,38 @@
+{
+  "name": "HTML",
+  "extensions": [".html", ".htm", ".xhtml"],
+  "patterns": {
+    "doctype": {
+      "pattern": "<!DOCTYPE[^>]*>",
+      "flags": "i"
+    },
+    "comment": {
+      "pattern": "<!--[\\s\\S]*?-->",
+      "flags": ""
+    },
+    "tag": {
+      "pattern": "<\\/?[\\w-]+(?:\\s[^>]*?)?>",
+      "flags": ""
+    },
+    "attribute": {
+      "pattern": "\\b[\\w-]+(?=\\s*=)",
+      "flags": ""
+    },
+    "string": {
+      "pattern": "(\"[^\"]*?\"|'[^']*?')",
+      "flags": ""
+    },
+    "entity": {
+      "pattern": "&[#\\w]+;",
+      "flags": ""
+    },
+    "script": {
+      "pattern": "<script[^>]*>[\\s\\S]*?<\\/script>",
+      "flags": "i"
+    },
+    "style": {
+      "pattern": "<style[^>]*>[\\s\\S]*?<\\/style>",
+      "flags": "i"
+    }
+  }
+}

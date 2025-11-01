@@ -1,0 +1,16 @@
+{
+  "background": "#002b36",
+  "foreground": "#839496",
+  "insertbackground": "#839496",
+  "insertwidth": "2",
+  "selectbackground": "#073642",
+  "selectforeground": "#93a1a1",
+  "keyword": "#859900",
+  "builtin": "#b58900",
+  "string": "#2aa198",
+  "comment": "#586e75",
+  "number": "#d33682",
+  "function": "#268bd2",
+  "class": "#cb4b16",
+  "search": "#094352"
+}

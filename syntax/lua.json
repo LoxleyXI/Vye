@@ -1,0 +1,38 @@
+{
+  "name": "Lua",
+  "extensions": [".lua"],
+  "patterns": {
+    "comment": {
+      "pattern": "(--\\[\\[[\\s\\S]*?\\]\\]|--.*?$)",
+      "flags": "m"
+    },
+    "keyword": {
+      "pattern": "\\b(and|break|do|else|elseif|end|false|for|function|goto|if|in|local|nil|not|or|repeat|return|then|true|until|while)\\b",
+      "flags": ""
+    },
+    "builtin": {
+      "pattern": "\\b(assert|collectgarbage|dofile|error|getmetatable|ipairs|load|loadfile|next|pairs|pcall|print|rawequal|rawget|rawlen|rawset|require|select|setmetatable|tonumber|tostring|type|xpcall|_G|_VERSION|coroutine|debug|io|math|os|package|string|table|utf8)\\b",
+      "flags": ""
+    },
+    "string": {
+      "pattern": "(\"(?:[^\"\\\\]|\\\\.)*?\"|'(?:[^'\\\\]|\\\\.)*?'|\\[\\[[\\s\\S]*?\\]\\])",
+      "flags": ""
+    },
+    "number": {
+      "pattern": "\\b(?:0[xX][0-9a-fA-F]+(?:\\.[0-9a-fA-F]*)?(?:[pP][+-]?\\d+)?|\\d+\\.?\\d*(?:[eE][+-]?\\d+)?)\\b",
+      "flags": ""
+    },
+    "function": {
+      "pattern": "\\bfunction\\s+(\\w+(?:\\.\\w+|:\\w+)?)|\\b(\\w+)\\s*=\\s*function\\b",
+      "flags": ""
+    },
+    "operator": {
+      "pattern": "(?:==|~=|<=|>=|\\.\\.|[+\\-*/%^#<>=]=?)",
+      "flags": ""
+    },
+    "class": {
+      "pattern": "\\blocal\\s+(\\w+)\\s*=\\s*\\{|\\b(\\w+)\\s*=\\s*\\{",
+      "flags": ""
+    }
+  }
+}

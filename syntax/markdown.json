@@ -1,0 +1,50 @@
+{
+  "name": "Markdown",
+  "extensions": [".md", ".markdown", ".mkd", ".mdx"],
+  "patterns": {
+    "heading": {
+      "pattern": "^#{1,6}\\s+.*$",
+      "flags": "m"
+    },
+    "bold": {
+      "pattern": "\\*\\*[^*]+\\*\\*|__[^_]+__",
+      "flags": ""
+    },
+    "italic": {
+      "pattern": "(?<!\\*)\\*[^*]+\\*(?!\\*)|(?<!_)_[^_]+_(?!_)",
+      "flags": ""
+    },
+    "strikethrough": {
+      "pattern": "~~[^~]+~~",
+      "flags": ""
+    },
+    "code": {
+      "pattern": "`[^`]+`|```[\\s\\S]*?```",
+      "flags": ""
+    },
+    "link": {
+      "pattern": "\\[[^\\]]+\\]\\([^)]+\\)",
+      "flags": ""
+    },
+    "image": {
+      "pattern": "!\\[[^\\]]*\\]\\([^)]+\\)",
+      "flags": ""
+    },
+    "list": {
+      "pattern": "^\\s*(?:[*+-]|\\d+\\.)\\s+",
+      "flags": "m"
+    },
+    "blockquote": {
+      "pattern": "^>\\s+.*$",
+      "flags": "m"
+    },
+    "horizontal_rule": {
+      "pattern": "^(?:---+|\\*\\*\\*+|___+)$",
+      "flags": "m"
+    },
+    "table": {
+      "pattern": "^\\|.+\\|$",
+      "flags": "m"
+    }
+  }
+}

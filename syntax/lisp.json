@@ -1,0 +1,42 @@
+{
+  "name": "Common Lisp",
+  "extensions": [".lisp", ".lsp", ".cl", ".asd"],
+  "patterns": {
+    "comment": {
+      "pattern": ";.*?$",
+      "flags": "m"
+    },
+    "keyword": {
+      "pattern": "\\b(and|block|case|catch|cond|defclass|defconstant|defgeneric|define-compiler-macro|define-condition|define-method-combination|define-modify-macro|define-setf-expander|define-symbol-macro|defmacro|defmethod|defpackage|defparameter|defsetf|defstruct|deftype|defun|defvar|do|do\\*|dolist|dotimes|ecase|etypecase|eval-when|flet|function|go|if|in-package|labels|lambda|let|let\\*|load-time-value|locally|loop|macrolet|multiple-value-bind|multiple-value-call|multiple-value-prog1|or|progn|progv|prog1|prog2|prog\\*|quote|return|return-from|setf|setq|symbol-macrolet|tagbody|the|throw|typecase|unless|unwind-protect|when|with-accessors|with-compilation-unit|with-condition-restarts|with-hash-table-iterator|with-input-from-string|with-open-file|with-open-stream|with-output-to-string|with-package-iterator|with-simple-restart|with-slots|with-standard-io-syntax)\\b",
+      "flags": ""
+    },
+    "builtin": {
+      "pattern": "\\b(t|nil|append|apply|aref|assoc|car|cdr|caar|cadr|cdar|cddr|cons|concatenate|delete|elt|eq|eql|equal|equalp|error|find|first|format|funcall|gensym|get|getf|hash-table-count|identity|intersection|length|list|list\\*|listp|make-array|make-hash-table|make-instance|make-list|make-string|map|mapcar|mapcan|mapc|mapcon|member|nconc|not|nreverse|nth|nthcdr|null|numberp|position|print|princ|prin1|push|pop|read|read-line|remove|remove-if|remove-if-not|rest|reverse|rplaca|rplacd|second|set|sort|string|stringp|subseq|substitute|symbolp|third|typep|union|values|vector|vectorp|warn|zerop|\\+|\\-|\\*|/|=|/=|<|>|<=|>=|1\\+|1-|abs|acos|asin|atan|ceiling|cos|exp|expt|floor|log|max|min|mod|oddp|evenp|random|rem|round|sin|sqrt|tan|truncate)\\b",
+      "flags": ""
+    },
+    "string": {
+      "pattern": "\"(?:[^\"\\\\]|\\\\.)*?\"",
+      "flags": ""
+    },
+    "number": {
+      "pattern": "\\b(?:[+-]?\\d+(?:\\.\\d+)?(?:[eE][+-]?\\d+)?|#[xX][0-9a-fA-F]+|#[bB][01]+|#[oO][0-7]+)\\b",
+      "flags": ""
+    },
+    "function": {
+      "pattern": "\\(\\s*(defun|defmacro|defmethod|defgeneric)\\s+(\\w[\\w-]*)",
+      "group": 2
+    },
+    "class": {
+      "pattern": "\\(\\s*(?:defclass|defstruct|define-condition)\\s+(\\w[\\w-]*)",
+      "group": 1
+    },
+    "operator": {
+      "pattern": "['`#,@]|\\.\\.\\.",
+      "flags": ""
+    },
+    "boolean": {
+      "pattern": "\\b(t|nil)\\b",
+      "flags": ""
+    }
+  }
+}

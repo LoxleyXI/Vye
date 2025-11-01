@@ -1,0 +1,42 @@
+{
+  "name": "C/C++",
+  "extensions": [".c", ".h", ".cpp", ".cc", ".cxx", ".hpp", ".hxx", ".hh"],
+  "patterns": {
+    "comment": {
+      "pattern": "(//.*?$|/\\*[\\s\\S]*?\\*/)",
+      "flags": "m"
+    },
+    "keyword": {
+      "pattern": "\\b(alignas|alignof|and|and_eq|asm|auto|bitand|bitor|bool|break|case|catch|char|char8_t|char16_t|char32_t|class|compl|concept|const|consteval|constexpr|constinit|const_cast|continue|co_await|co_return|co_yield|decltype|default|delete|do|double|dynamic_cast|else|enum|explicit|export|extern|false|float|for|friend|goto|if|inline|int|long|mutable|namespace|new|noexcept|not|not_eq|nullptr|operator|or|or_eq|private|protected|public|register|reinterpret_cast|requires|return|short|signed|sizeof|static|static_assert|static_cast|struct|switch|template|this|thread_local|throw|true|try|typedef|typeid|typename|union|unsigned|using|virtual|void|volatile|wchar_t|while|xor|xor_eq)\\b",
+      "flags": ""
+    },
+    "builtin": {
+      "pattern": "\\b(std|string|vector|map|set|list|deque|array|pair|tuple|unique_ptr|shared_ptr|weak_ptr|nullptr_t|size_t|ptrdiff_t|int8_t|int16_t|int32_t|int64_t|uint8_t|uint16_t|uint32_t|uint64_t|FILE|NULL|EXIT_SUCCESS|EXIT_FAILURE)\\b",
+      "flags": ""
+    },
+    "string": {
+      "pattern": "(\"(?:[^\"\\\\]|\\\\.)*?\"|'(?:[^'\\\\]|\\\\.)?'|R\"\\([\\s\\S]*?\\)\")",
+      "flags": ""
+    },
+    "number": {
+      "pattern": "\\b(?:0[xX][0-9a-fA-F]+|0[bB][01]+|0[0-7]+|\\d+\\.?\\d*(?:[eE][+-]?\\d+)?[uUlLfF]*)\\b",
+      "flags": ""
+    },
+    "function": {
+      "pattern": "\\b([a-zA-Z_]\\w*)\\s*(?=\\()",
+      "flags": ""
+    },
+    "class": {
+      "pattern": "\\b(?:class|struct|enum|union)\\s+(\\w+)",
+      "group": 1
+    },
+    "decorator": {
+      "pattern": "#\\s*(?:include|define|undef|ifdef|ifndef|if|endif|elif|else|error|pragma|warning)\\b.*?$",
+      "flags": "m"
+    },
+    "operator": {
+      "pattern": "(?:<<|>>|<=|>=|==|!=|&&|\\|\\||\\+\\+|--|->|\\.|::|[+\\-*/%&|^~!<>=]=?)",
+      "flags": ""
+    }
+  }
+}

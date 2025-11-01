@@ -1,0 +1,5 @@
+{
+  "name": "Plain Text",
+  "extensions": [".txt", ".text", ".log"],
+  "patterns": {}
+}

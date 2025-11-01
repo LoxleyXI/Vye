@@ -1,0 +1,46 @@
+{
+  "name": "CSS",
+  "extensions": [".css", ".scss", ".sass", ".less"],
+  "patterns": {
+    "comment": {
+      "pattern": "\\/\\*[\\s\\S]*?\\*\\/",
+      "flags": ""
+    },
+    "selector": {
+      "pattern": "^[^{};]*(?={)",
+      "flags": "m"
+    },
+    "property": {
+      "pattern": "[\\w-]+(?=\\s*:)",
+      "flags": ""
+    },
+    "value": {
+      "pattern": ":\\s*[^;]+",
+      "flags": ""
+    },
+    "string": {
+      "pattern": "(\"[^\"]*?\"|'[^']*?')",
+      "flags": ""
+    },
+    "number": {
+      "pattern": "\\b\\d+\\.?\\d*(?:px|em|rem|%|vh|vw|vmin|vmax|pt|pc|in|cm|mm|ex|ch|s|ms|deg|rad|grad|turn)?\\b",
+      "flags": ""
+    },
+    "color": {
+      "pattern": "#[0-9A-Fa-f]{3,8}\\b|\\b(?:rgb|rgba|hsl|hsla)\\([^)]+\\)",
+      "flags": ""
+    },
+    "important": {
+      "pattern": "!important",
+      "flags": ""
+    },
+    "variable": {
+      "pattern": "--[\\w-]+",
+      "flags": ""
+    },
+    "at-rule": {
+      "pattern": "@[\\w-]+",
+      "flags": ""
+    }
+  }
+}

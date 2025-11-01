@@ -1,0 +1,46 @@
+{
+  "name": "TypeScript",
+  "extensions": [".ts", ".tsx"],
+  "patterns": {
+    "comment": {
+      "pattern": "(//.*?$|/\\*[\\s\\S]*?\\*/)",
+      "flags": "m"
+    },
+    "keyword": {
+      "pattern": "\\b(abstract|any|as|asserts|async|await|bigint|boolean|break|case|catch|class|const|constructor|continue|debugger|declare|default|delete|do|else|enum|export|extends|false|finally|for|from|function|get|if|implements|import|in|infer|instanceof|interface|is|keyof|let|module|namespace|never|new|null|number|of|package|private|protected|public|readonly|require|return|set|static|string|super|switch|symbol|this|throw|true|try|type|typeof|undefined|unique|unknown|var|void|while|with|yield)\\b",
+      "flags": ""
+    },
+    "builtin": {
+      "pattern": "\\b(Array|ArrayBuffer|Boolean|DataView|Date|Error|EvalError|Float32Array|Float64Array|Function|Infinity|Int8Array|Int16Array|Int32Array|Intl|JSON|Map|Math|NaN|Number|Object|Promise|Proxy|RangeError|ReferenceError|Reflect|RegExp|Set|String|Symbol|SyntaxError|TypeError|URIError|Uint8Array|Uint8ClampedArray|Uint16Array|Uint32Array|WeakMap|WeakSet|console|document|window|global|process|Buffer|setTimeout|setInterval|clearTimeout|clearInterval)\\b",
+      "flags": ""
+    },
+    "string": {
+      "pattern": "(\"(?:[^\"\\\\]|\\\\.)*?\"|'(?:[^'\\\\]|\\\\.)*?'|`(?:[^`\\\\]|\\\\.|\\$\\{[^}]*\\})*?`)",
+      "flags": ""
+    },
+    "number": {
+      "pattern": "\\b(?:0[xX][0-9a-fA-F]+|0[bB][01]+|0[oO][0-7]+|\\d+\\.?\\d*(?:[eE][+-]?\\d+)?[nN]?)\\b",
+      "flags": ""
+    },
+    "function": {
+      "pattern": "\\b(?:function\\s+)?(\\w+)\\s*(?=\\()|\\b(\\w+)\\s*(?=:\\s*\\([^)]*\\)\\s*=>)",
+      "flags": ""
+    },
+    "class": {
+      "pattern": "\\b(?:class|interface|type|enum)\\s+(\\w+)",
+      "group": 1
+    },
+    "decorator": {
+      "pattern": "@[\\w.$]+",
+      "flags": ""
+    },
+    "operator": {
+      "pattern": "(?:===|!==|==|!=|<=|>=|=>|&&|\\|\\||\\?\\?|\\+\\+|--|\\.\\.\\.|[+\\-*/%&|^~!<>=?:]=?)",
+      "flags": ""
+    },
+    "regex": {
+      "pattern": "/(?![/*])(?:[^/\\\\\\n\\r]|\\\\.)*/[gimsuvy]*",
+      "flags": ""
+    }
+  }
+}
